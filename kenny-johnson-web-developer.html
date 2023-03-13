@@ -31,9 +31,10 @@
       ul {
         list-style: none;
       }
-      ul > li {
+      ul > li > ul > li {
         margin: 0;
         padding: 0;
+        list-style: square;
       }
       #skills-list > li {
         margin: 0 auto;
@@ -41,11 +42,6 @@
         padding: 0 25px;
         font-weight: 900;
         display: inline;
-      }
-      nav > ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
       }
       .section {
         margin-top: 30px;
@@ -70,29 +66,28 @@
         border-radius: 5px;
         z-index: 1;
       }
+      #skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-      #skills-list > li:hover,
-      #experience > ul > li > ul > li:hover {
-        background-color: #333;
-        color: #fff;
+      #skills-list li {
+        flex: 1 1 200px;;
+        text-align: center;
       }
 
       /* Media query for responsive design */
       @media only screen and (max-width: 768px) {
-        #skills-list > li {
-          margin-bottom: 5px;
-          padding: 0 15px;
-          font-size: 14px;
-          font-weight: bold;
-        }
-
         h2 {
           font-size: 20px;
           margin-top: 10px;
         }
 
-        p {
-          font-size: 16px;
+        p, li {
+          font-size: 14px;
         }
       }
     </style>
@@ -100,14 +95,6 @@
   <body>
     <header>
       <h1>Kenny Johnson</h1>
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="#summary">Summary</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-        </ul>
-      </nav>
     </header>
     <section class="section" id="summary">
       <h2 id="role" tabindex="0">Web Developer</h2>
@@ -135,6 +122,48 @@
         <li>Git</li>
         <li>Shopify/Liquid</li>
         <li>WordPress</li>
+      </ul>
+    </section>
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <h3>Portfolio</h3>
+          <p>
+            <a href="https://kenny-johnson-portfolio.vercel.app/"
+              ><em>Portfolio</em></a
+            >
+          </p>
+          <ul>
+            <li>Created using Next.js and TailwindCSS</li>
+            <li>Deployed using Vercel</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Shopify Landing Page</h3>
+          <p>
+            <a href="https://www.suziekondi.com/"><em>Tango Squared</em></a>
+          </p>
+          <ul>
+            <li>
+              Implemented custom Shopify Pages including native user update
+              functionality
+            </li>
+            <li>Used Figma to design and create custom components</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Shopify Theme</h3>
+          <p>
+            <a href="https://www.fullstackacademy.com/"
+              ><em>Fullstack Academy</em></a
+            >
+          </p>
+          <ul>
+            <li>Created custom Shopify Pro theme</li>
+            <li>Used Figma to design and create custom components</li>
+          </ul>
+        </li>
       </ul>
     </section>
     <section class="section" id="experience">
@@ -184,7 +213,7 @@
     <section class="section" id="Education">
       <h2>Education</h2>
       <p>Bachelor</p>
-      <p>Musician's Institute | September 2008 - June 2010 </p>
+      <p>Musician's Institute | September 2008 - June 2010</p>
     </section>
   </body>
 </html>
