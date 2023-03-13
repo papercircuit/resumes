@@ -1,90 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Kenny Johnson ⌁ Web Developer</title>
     <style>
-      /* CSS styling */
+      * {
+        box-sizing: border-box;
+        transition: all 0.3s ease-in-out;
+      }
       body {
         font-family: Menlo, Monaco, "Courier New", monospace;
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 1.25;
+        padding: 1rem;
+        margin: 2rem;
       }
+
       h1 {
-        font-size: 28px;
-        margin-top: 0;
+        font-size: 30px;
       }
       h2 {
-        font-size: 24px;
-        margin-top: 20px;
+        font-size: 22px;
+      }
+      h3 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 18px;
       }
       ul {
+        list-style: none;
+      }
+      ul > li {
         margin: 0;
         padding: 0;
       }
-      li {
+      #skills-list > li {
+        margin: 0 auto;
         margin-bottom: 10px;
+        padding: 0 25px;
+        font-weight: 900;
+        display: inline;
+      }
+      nav > ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
       .section {
         margin-top: 30px;
       }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      /* Hover effect */
+      #role:hover:after,
+      #role:focus:after {
+        content: " ⌁ musician, lover of the outdoors, motorcycle enthusiast";
+        position: inline;
+        top: 40px;
+        left: 0;
+        font-size: 12px;
+        color: #333;
+        padding: 5px;
+        border-radius: 5px;
+        z-index: 1;
+      }
+
+      #skills-list > li:hover,
+      #experience > ul > li > ul > li:hover {
+        background-color: #333;
+        color: #fff;
+      }
+
+      /* Media query for responsive design */
+      @media only screen and (max-width: 768px) {
+        #skills-list > li {
+          margin-bottom: 5px;
+          padding: 0 15px;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        h2 {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
     </style>
   </head>
   <body>
-    <h1>Kenny Johnson</h1>
-    <h2 id="">Web Developer</h2>
-    <section class="section">
-      <h2>Summary</h2>
+    <header>
+      <h1>Kenny Johnson</h1>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="section" id="summary">
+      <h2 id="role" tabindex="0">Web Developer</h2>
       <p>
-        A web developer with 5 years of experience in creating and maintaining
-        websites. Proficient in HTML, CSS, JavaScript, and PHP. Strong
-        communication and problem-solving skills.
+        A web developer with 1 years of experience in creating and maintaining
+        websites. Proficient in HTML, CSS, JavaScript, React, Next, TailwindCSS,
+        and Shopify/Liquid. Strong communication, autonomy and problem-solving
+        skills from 15 years as a freelance creative. Passionate about creating
+        a web that is accessible to all.
       </p>
     </section>
-    <section class="section">
+    <section class="section" id="skills">
       <h2>Skills</h2>
-      <ul>
+      <ul id="skills-list">
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>NEXT</li>
+        <li>Node.js</li>
         <li>HTML</li>
         <li>CSS</li>
-        <li>JavaScript</li>
-        <li>PHP</li>
-        <li>Responsive web design</li>
+        <li>TailwindCSS</li>
+        <li>Express</li>
+        <li>Postgres</li>
+        <li>REST APIs</li>
         <li>Git</li>
+        <li>Shopify/Liquid</li>
         <li>WordPress</li>
       </ul>
     </section>
-    <section class="section">
+    <section class="section" id="experience">
       <h2>Experience</h2>
       <ul>
         <li>
-          <h3>Web Developer</h3>
-          <p>ABC Company | January 2018 - Present</p>
+          <h3>Digital Content Manager</h3>
+          <p>
+            <a href="https://www.clubmed.us/"><em>Club Med</em></a> [Contract] |
+            August 2022 - Present
+          </p>
           <ul>
-            <li>Develop and maintain company website using WordPress</li>
-            <li>Create custom WordPress themes and plugins</li>
-            <li>Implement responsive web design</li>
-            <li>Collaborate with designers and content creators</li>
+            <li>Transfered Figma and Sketch designs to HTML and CSS</li>
+            <li>Used Dartagnan to create custom components</li>
           </ul>
         </li>
         <li>
           <h3>Web Developer</h3>
-          <p>XYZ Agency | June 2015 - December 2017</p>
+          <p>
+            <a href="https://www.tangosqured.com/"><em>Tango Squared</em></a>
+            [Contract] | October 2022 - Febuary 2023
+          </p>
           <ul>
-            <li>
-              Developed and maintained websites for clients using HTML, CSS, and
-              JavaScript
-            </li>
+            <li>Developed and maintained client websites using Shopify</li>
+            <li>Created custom Shopify Pro themes and pages</li>
             <li>Implemented responsive web design</li>
-            <li>Collaborated with designers and project managers</li>
+            <li>Collaborated with designers and clients</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Web Developer</h3>
+          <p>
+            <a href="https://www.fullstackacademy.com/">
+              <em>Fullstack Academy</em></a
+            >
+            [Web Dev Bootcamp] | September 2022 - December 2022
+          </p>
+          <ul>
+            <li>Developed and maintained company website using Shopify</li>
+            <li>Created custom Shopify Pro themes and pages</li>
+            <li>Implemented responsive web design</li>
+            <li>Collaborated with designers and clients</li>
           </ul>
         </li>
       </ul>
     </section>
-    <section class="section">
+    <section class="section" id="Education">
       <h2>Education</h2>
-      <ul>
-        <li>Bachelor of Science in Computer Science</li>
-        <li>XYZ University | September 2011 - June 2015</li>
-      </ul>
+      <p>Bachelor</p>
+      <p>Musician's Institute | September 2008 - June 2010 </p>
     </section>
   </body>
 </html>
